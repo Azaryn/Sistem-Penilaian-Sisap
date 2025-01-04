@@ -1,0 +1,7 @@
+D:\Coding Coba\Belajar Sisap\SistemPenilaian\SistemPenilaian\obj\Debug\SistemPenilaian.csproj.AssemblyReference.cache
+D:\Coding Coba\Belajar Sisap\SistemPenilaian\SistemPenilaian\obj\Debug\SistemPenilaian.csproj.CoreCompileInputs.cache
+D:\Coding Coba\Belajar Sisap\SistemPenilaian\SistemPenilaian\bin\Debug\SistemPenilaian.exe.config
+D:\Coding Coba\Belajar Sisap\SistemPenilaian\SistemPenilaian\bin\Debug\SistemPenilaian.exe
+D:\Coding Coba\Belajar Sisap\SistemPenilaian\SistemPenilaian\bin\Debug\SistemPenilaian.pdb
+D:\Coding Coba\Belajar Sisap\SistemPenilaian\SistemPenilaian\obj\Debug\SistemPenilaian.exe
+D:\Coding Coba\Belajar Sisap\SistemPenilaian\SistemPenilaian\obj\Debug\SistemPenilaian.pdb
