@@ -43,6 +43,7 @@ namespace SistemPenilaian
                 Console.WriteLine("Would you like to continue? [Y/N]: ");
             } while (Console.ReadLine()?.ToUpper() == "Y");
 
+            Console.Clear();
             Rata rata = new Rata();
             Grading grading = new Grading();
 
@@ -52,12 +53,106 @@ namespace SistemPenilaian
                 double rataRata = rata.HitungRata(nilaimahasiswa);
                 string grade = grading.TentukanGrade(rataRata);
 
+                Console.WriteLine("=====================================");
                 Console.WriteLine($"Nama Mahasiswa: {list_mahasiswa[i]}");
                 Console.WriteLine($"Rata-rata: {rataRata}");
                 Console.WriteLine($"Grade: {grade}");
             }
-            Console.ReadLine();
+            MatkulPertama Algo = new MatkulPertama();
+            MatkulKedua Matdis = new MatkulKedua();
+            MatkulKetiga Jarkom = new MatkulKetiga();
 
+            double rataAlgo = Algo.Matkul(list_matkul1);
+            double rataMatdis = Matdis.Matkul(list_matkul2);
+            double rataJarkom = Jarkom.Matkul(list_matkul3);
+
+            Console.WriteLine(" ");
+            Console.WriteLine("=====================================");
+            Console.WriteLine($"Rata rata Mata Kuliah Algoritma: {rataAlgo}");
+            Console.WriteLine($"Rata rata Mata Kuliah Matematika Diskrit: {rataMatdis}");
+            Console.WriteLine($"Rata rata Mata Kuliah Jaringan Komputer: {rataJarkom}");
+            Console.WriteLine("=====================================");
+            Console.WriteLine(" ");
+
+            Console.ReadLine();
+            
+        }
+        class Grading
+        {
+            public string TentukanGrade(double rataMahasiswa)
+            {
+                string grade = "";
+
+                if (rataMahasiswa >= 90)
+                {
+                    grade = "A";
+                }
+                else if (rataMahasiswa >= 80)
+                {
+                    grade = "B";
+                }
+                else if (rataMahasiswa >= 70)
+                {
+                    grade = "C";
+                }
+                else
+                {
+                    grade = "D";
+                }
+                return grade;
+            }
+        }
+        class Rata
+        {
+            public double HitungRata(List<int> nilai)
+            {
+                if (nilai.Count == 0)
+                {
+                    throw new ArgumentException("List tidak boleh kosong.");
+                }
+                double rata = 0;
+                foreach (var num in nilai)
+                {
+                    rata += num;
+                }
+                return rata / nilai.Count;
+            }
+        }
+        class MatkulPertama
+            {
+                public double Matkul(List<int> list_matkul1)
+                {
+                    double rataPertama = 0;
+                    foreach (int num in list_matkul1)
+                    {
+                        rataPertama += num;
+                    }
+                    return rataPertama / list_matkul1.Count;
+                }
+            }
+        class MatkulKedua
+        {
+            public double Matkul(List<int> list_matkul2)
+            {
+                double rataKedua = 0;
+                foreach (int num in list_matkul2)
+                {
+                    rataKedua += num;
+                }
+                return rataKedua / list_matkul2.Count;
+            }
+        }        
+        class MatkulKetiga
+        {
+            public double Matkul(List<int> list_matkul3)
+            {
+                double rataKetiga = 0;
+                foreach (int num in list_matkul3)
+                {
+                    rataKetiga += num;
+                }
+                return rataKetiga / list_matkul3.Count;
+            }
         }
     }
 }
